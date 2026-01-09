@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+const { randomUUID } = require('crypto');
+console.log(randomUUID());

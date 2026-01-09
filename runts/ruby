@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+adjectives = %w[fantastic incredible brilliant magnificent stellar]
+nouns = %w[developer human coder wizard champion]
+puts "You are a #{adjectives.sample} #{nouns.sample}."

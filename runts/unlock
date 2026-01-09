@@ -64,3 +64,6 @@ else
 	echo
 	echo "See the new runt available with: runt"
 fi
+
+echo
+echo "After you play around, cd into runts/ and open some of these little things up to see how they work."
