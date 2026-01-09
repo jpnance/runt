@@ -10,7 +10,7 @@ if [ ! -d "${runts_dir}" ]; then
 fi
 
 if [ -z "$1" ] || [ "$1" == "help" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
-	echo "usage: $(basename $0) <runt> [args...]"
+	echo "Usage: $(basename $0) <runt> [args...]"
 	echo
 	echo "Available runts:"
 
