@@ -10,6 +10,6 @@ fi
 
 echo "Nice to meet you, $1!"
 echo
-echo "Now, try: runt unlock"
+echo "Now try: runt unlock"
 echo
 echo "It won't work yet but trust the process."
