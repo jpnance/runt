@@ -2,6 +2,20 @@
 
 Run a task.
 
+## The Instructions
+
+If all you want to do is immediately start using `runt`, grab the [runt](https://raw.githubusercontent.com/jpnance/runt/refs/heads/main/runt) file from this repository, make it executable with `chmod u+x runt`, and then put it in `~/bin` (or a different place that's in your `PATH`). Off you go!
+
+If you'd like to try it out first and be lavished with a more curated tutorial-esque experience, do this stuff:
+
+```bash
+git clone https://github.com/jpnance/runt
+cd runt
+PATH="$PWD:$PATH" bash
+```
+
+This will set up a quasi-sandbox inside which `runt` will be executable. Try executing it!
+
 ## The Past
 
 Once upon a time, I got tired of typing `docker exec -it container sh -c "cd /app && whatever`, so I created a `Makefile` and made it so I could type `make whatever` instead. This was fine. One day, I needed a directory called `whatever/` so I created it. This was also fine. A few days later, though, I realized that `make whatever` didn't work the way I wanted it to anymore. Things were no longer fine. I was being mean to `make`, asking it to be a task runner when it really just wants to be a dependency manager.
