@@ -67,3 +67,7 @@ I like bespoke stuff. I like code that I can understand within, say, ten minutes
 **Why do I have to use `runts/`?**
 
 You don't. Change the script, I don't care. "Go hog wild", after all, is one of the rules listed above.
+
+**Why aren't there any tests?**
+
+For thirty-eight lines of Bash?
