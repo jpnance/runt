@@ -4,7 +4,7 @@ Run a task.
 
 ## The Past
 
-Once upon a time, I got tired of typing `docker exec -it container sh -c "cd /app && whatever`, so I created a `Makefile` and made it so I could type `make whatever` instead. This was fine. One day, I needed a directory called `whatever/` so I created it. This was also, fine. A few days later, though, I realized that `make whatever` didn't work the way I wanted it to anymore. Things were no longer fine. I was being mean to `make`, asking it to be a task runner when it really just wants to be a dependency manager.
+Once upon a time, I got tired of typing `docker exec -it container sh -c "cd /app && whatever`, so I created a `Makefile` and made it so I could type `make whatever` instead. This was fine. One day, I needed a directory called `whatever/` so I created it. This was also fine. A few days later, though, I realized that `make whatever` didn't work the way I wanted it to anymore. Things were no longer fine. I was being mean to `make`, asking it to be a task runner when it really just wants to be a dependency manager.
 
 The ecosystem being the way it is, the options seemed to be: a) sprinkle a bunch of `.PHONY`s in my `Makefile`; b) shoehorn my needs into `npm` scripts and enter a new circle of `package.json` hell; c) learn how to use a (very nice looking, to be honest) tool called [just](https://just.systems/); or d) just (as it were) make my own thing. Me being the way I am, I chose to just make my own thing. Here it is.
 
