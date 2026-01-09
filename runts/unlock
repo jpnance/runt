@@ -43,7 +43,7 @@ echo -n "Is Ruby installed? ... "
 if command -v ruby &>/dev/null; then
 	found_anything=true
 
-	chmod u+x runts/docker
+	chmod u+x runts/ruby
 	echo "Cowabunga."
 else
 	echo "Nope."
@@ -51,13 +51,16 @@ fi
 
 chmod u+x runts/finale
 
-echo
-
 if [ "${found_anything}" = true ]; then
+	echo "Is water wet? ... The wettest."
+	echo
 	echo "You've got some good stuff on your system and I just unlocked some more runts to show you."
+	echo
 	echo "See what else you can do now by typing: runt"
 else
+	echo
 	echo "I've got some more runts to show off but they require those things I just looked for."
 	echo "It doesn't look like you've got any of them installed, unfortunately, but I've still unlocked something for you."
+	echo
 	echo "See the new runt available with: runt"
 fi
