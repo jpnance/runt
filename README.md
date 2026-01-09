@@ -32,7 +32,7 @@ I picked an MIT license because I don't care what you do with this. I don't real
 
 `make` wants to manage dependencies; it's willing to run tasks if that's what it takes to manage dependencies. The main quirk of this is that when you really only want `make`'s task-running capability, you can't have directories or files named the same thing as one of the task names because `make` thinks of that directory as a dependency under its purview. It's also tricky to pass arguments and some other little things but, for me, that was the main thing: I wanted my file structure to not have to care about my task names.
 
-I know I could just drop `.PHONY` into make `Makefile` wherever I needed to disambiguate but that set off my hokeyometer, which is a definitely real device that I use to measure how hokey something is. If something's too hokey, I can't do it.
+I know I could just drop `.PHONY` into my `Makefile` wherever I needed to disambiguate but that set off my hokeyometer, which is a definitely real device that I use to measure how hokey something is. If something's too hokey, I can't do it.
 
 **Why not just use `npm run`?**
 
@@ -40,7 +40,7 @@ Tell me you've never actually tried to write a non-trivial `package.json` script
 
 **Why not just use `just`?**
 
-`just` looks like a great tool to me and it has a bunch of features I will definitely never bother to support in `runt`. You should probably [check it out](https://just.systems/) first. I just (sorry) didn't care to have to manage a new dependency across so many of my systems. `runt` is a dependency, yes, but it's one that I can just throw into my dotfiles that I already manage well with [chezmoi](https://www.chezmoi.io/). I also didn't want to learn a new syntax (eh, sort of, I guess it's supposed to be a superset of `Makefile`) for what I felt were very simple needs. At the end of the day, we're just talking about little shell scripts.
+`just` looks like a great tool to me and it has a bunch of features I will definitely never bother to support in `runt`. You should probably [check it out](https://just.systems/) first. I just (sorry) didn't care to have to manage a new dependency across so many of my systems. `runt` is a dependency, yes, but it's one that I can just throw into my dotfiles that I already manage well with [chezmoi](https://www.chezmoi.io/). I also didn't want to learn a new syntax (eh, sort of, it at least looks like a `Makefile`) for what I felt were very simple needs. At the end of the day, we're just talking about little shell scripts.
 
 **Why not just put your scripts in `bin/`??**
 
@@ -52,4 +52,4 @@ I like bespoke stuff. I like code that I can understand within, say, ten minutes
 
 **Why do I have to use `runts/`?**
 
-You don't. Change the script, I don't care. "Go hog wild", after all, is one of the rules listed below.
+You don't. Change the script, I don't care. "Go hog wild", after all, is one of the rules listed above.
