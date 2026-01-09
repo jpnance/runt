@@ -42,7 +42,7 @@ Tell me you've never actually tried to write a non-trivial `package.json` script
 
 `just` looks like a great tool to me and it has a bunch of features I will definitely never bother to support in `runt`. You should probably [check it out](https://just.systems/) first. I just (sorry) didn't care to have to manage a new dependency across so many of my systems. `runt` is a dependency, yes, but it's one that I can just throw into my dotfiles that I already manage well with [chezmoi](https://www.chezmoi.io/). I also didn't want to learn a new syntax (eh, sort of, it at least looks like a `Makefile`) for what I felt were very simple needs. At the end of the day, we're just talking about little shell scripts.
 
-**Why not just put your scripts in `bin/`??**
+**Why not just put your scripts in `bin/`?**
 
 Yeah, this is what I did first. It works fine, I just don't really like the ergonomics of typing, say, `bin/seed-data`. I wanted the feel of `make seed-data`.
 
