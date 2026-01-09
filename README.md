@@ -4,7 +4,7 @@ Run a task.
 
 ## The Instructions
 
-If all you want to do is immediately start using `runt`, grab the [runt](https://raw.githubusercontent.com/jpnance/runt/refs/heads/main/runt) file from this repository, make it executable with `chmod u+x runt`, and then put it in `~/bin` (or a different place that's in your `PATH`). Off you go!
+If all you want to do is immediately start using `runt`, grab the [runt](https://raw.githubusercontent.com/jpnance/runt/main/runt) file from this repository, make it executable with `chmod u+x runt`, and then put it in `~/bin` (or a different place that's in your `PATH`). Off you go!
 
 If you'd like to try it out first and be lavished with a more curated tutorial-esque experience, do this stuff:
 
