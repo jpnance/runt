@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "That's it! You made it!"
+echo
+echo "I hope you have a good idea of how runt works now:"
+echo "  * Runts are just executable scripts inside a runts/ directory"
+echo "  * Runts can be bash, node, python, ruby, or any other script runtime"
+echo "  * Arguments and environment variables pass through in their expected ways"
+echo
+echo "No configuration, no dependencies, no magic."
+echo
+echo "Good luck with whatever you're working on!"
