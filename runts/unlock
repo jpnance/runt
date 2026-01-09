@@ -54,7 +54,7 @@ chmod u+x runts/finale
 echo
 
 if [ "${found_anything}" = true ]; then
-	echo "You've got some good stuff on your system and I've got more cool stuff to show you."
+	echo "You've got some good stuff on your system and I just unlocked some more runts to show you."
 	echo "See what else you can do now by typing: runt"
 else
 	echo "I've got some more runts to show off but they require those things I just looked for."
