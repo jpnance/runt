@@ -1,0 +1,38 @@
+#!/bin/bash
+# runt - runs scripts in ./runts/
+
+runts_dir="./runts"
+
+if [ ! -d "${runts_dir}" ]; then
+	echo "No runts/ directory found." >&2
+
+	exit 1
+fi
+
+if [ -z "$1" ] || [ "$1" == "help" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
+	echo "usage: $(basename $0) <runt file> [args]"
+	echo
+	echo "Available runts:"
+
+	for f in "${runts_dir}/"*; do
+		[ -x "${f}" ] && echo "  $(basename "${f}")"
+	done
+
+	exit 0
+fi
+
+runt="${runts_dir}/$1"
+
+if [ ! -e "${runt}" ]; then
+	echo "Unknown runt: $1"
+
+	exit 1
+elif [ ! -x "${runt}" ]; then
+	echo "Unexecutable runt: $1"
+	echo "Try fixing with: chmod u+x ${runts_dir}/$1"
+
+	exit 1
+fi
+
+shift
+exec "${runt}" "$@"
