@@ -1,30 +1,63 @@
 #!/bin/bash
 
-if [ "${UNLOCK}" == "everything" ]; then
-	if [ "$1" == "--pretty=please" ]; then
-		echo "My pleasure, and thanks for saying $1!"
-		echo
+echo "Nicely done."
+echo
+echo "Runts are just scripts. If one isn't executable, runt will let you know."
+echo
+echo "Let's see what we're working with here."
+echo
 
-		if command -v docker &>/dev/null; then
-			chmod u+x runts/docker
-			echo "I see you have Docker installed. Cool."
-		fi
+found_anything=false
 
-		echo "See what else you can do now by typing: runt"
-	else
-		echo "Can you ask more nicely than that? Maybe by passing --pretty=please as an argument?"
-		echo "Try: UNLOCK=everything runt unlock --pretty=please"
-	fi
-elif [ -n "${EXCLAMATION}" ]; then
-	echo "${EXCLAMATION} is right! I'm glad you feel that way!"
-	echo
-	echo "I've got a few more things to show you but I've intentionally left them unexecutable."
-	echo "We can cut to the chase with: UNLOCK=everything runt unlock --pretty=please"
+echo -n "Is Python installed? ... "
+if command -v python3 &>/dev/null; then
+	found_anything=true
+
+	chmod u+x runts/python
+	echo "Nice."
 else
-	echo "Nicely done."
-	echo
-	echo "Runts are just scripts. If one isn't executable, runt will let you know."
-	echo
-	echo "You can also use environment variables with runts."
-	echo "Try: EXCLAMATION=Wowzers runt unlock"
+	echo "Nope."
+fi
+
+echo -n "Is Node.js installed? ... "
+if command -v node &>/dev/null; then
+	found_anything=true
+
+	chmod u+x runts/node
+	echo "Ace."
+else
+	echo "Nope."
+fi
+
+echo -n "Is Docker installed? ... "
+if command -v docker &>/dev/null; then
+	found_anything=true
+
+	chmod u+x runts/docker
+	echo "Cool."
+else
+	echo "Nope."
+fi
+
+echo -n "Is Ruby installed? ... "
+if command -v ruby &>/dev/null; then
+	found_anything=true
+
+	chmod u+x runts/docker
+	echo "Cowabunga."
+else
+	echo "Nope."
+fi
+
+chmod u+x runts/finale
+
+echo
+
+if [ "${found_anything}" = true ]; then
+	echo "You've got some good stuff on your system and I've got more cool stuff to show you."
+	echo "See what else you can do now by typing: runt"
+else
+	echo "I've got some more runts to show off but they require those things I just looked for."
+	echo "It doesn't look like you've got any of them installed, unfortunately, but I've still unlocked something for you."
+	echo "See the new runt available with: runt"
 fi
