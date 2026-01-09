@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-	echo "Hello! This is your first runt."
+	echo "Hello! Welcome to runt."
 	echo
-	echo "Tell me who you are with: runt hello <first name>"
+	echo "Tell me who you are: runt hello <first name>"
 
 	exit 0
 fi
