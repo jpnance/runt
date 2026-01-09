@@ -14,7 +14,7 @@ cd runt
 PATH="$PWD:$PATH" bash
 ```
 
-This will set up a quasi-sandbox inside which `runt` will be executable. Try executing it!
+This will set up a quasi-sandbox inside which `runt` will be executable. Try executing `runt hello`!
 
 ## The Past
 
