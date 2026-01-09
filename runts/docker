@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo "Making Docker container interactions easier was the big motivation for runt."
+	echo "This runt will demonstrate that a little bit."
+	echo
+	echo "Examples:"
+	echo "  runt docker hello-world             # Run hello-world"
+	echo "  runt docker alpine:latest sh        # Alpine shell"
+	echo "  runt docker python:3.12 python      # Python REPL"
+	echo
+	echo "No matter what, we're running with --rm so things will be tidy at the end."
+
+	exit 0
+fi
+
+image="$1"
+shift
+
+if [ "${image}" == "hello-world" ]; then
+	docker run --rm hello-world
+	echo "----------"
+	echo
+	echo "Hi, this is runt again. You can either do what Docker said up there (old hotness) or do it the runt way (new hotness)."
+	echo "Try: runt docker ubuntu bash"
+else
+	exec docker run --rm -it ${image} "$@"
+fi
