@@ -3,6 +3,36 @@
 
 runts_dir="./runts"
 
+if [ "$1" == "completion" ]; then
+	case "$2" in
+		bash)
+			cat <<'EOF'
+_runt_completions() {
+	if [ "${#COMP_WORDS[@]}" -ne 2 ]; then
+		return
+	fi
+
+	local runts_dir="./runts"
+	if [ -d "$runts_dir" ]; then
+		local runts=""
+		for f in "$runts_dir"/*; do
+			[ -x "$f" ] && runts="$runts $(basename "$f")"
+		done
+		COMPREPLY=($(compgen -W "$runts" -- "${COMP_WORDS[1]}"))
+	fi
+}
+complete -F _runt_completions runt
+EOF
+			;;
+		*)
+			echo "Usage: runt completion <shell>"
+			echo "Supported shells: bash"
+			exit 1
+			;;
+	esac
+	exit 0
+fi
+
 if [ ! -d "${runts_dir}" ]; then
 	echo "No runts/ directory found." >&2
 
