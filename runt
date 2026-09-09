@@ -21,7 +21,7 @@ _runt_completions() {
 		COMPREPLY=($(compgen -W "$runts" -- "${COMP_WORDS[1]}"))
 	fi
 }
-complete -F _runt_completions runt
+complete -F _runt_completions -o default runt
 EOF
 			;;
 		*)
